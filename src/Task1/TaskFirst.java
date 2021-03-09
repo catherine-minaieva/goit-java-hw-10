@@ -19,14 +19,11 @@ public class TaskFirst {
     }
 
     private static String exercise1(List<Person> persons) {
-        List<Person> result = persons.stream()
+        String result = persons.stream()
                 .filter(person -> person.getId() % 2 != 0)
-                .collect(Collectors.toList());
-
-        String line = result.stream()
                 .map(Person::toString)
                 .collect(Collectors.joining(", "));
-        return line;
+        return result;
     }
 }
 
